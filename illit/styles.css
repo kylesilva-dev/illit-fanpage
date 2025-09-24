@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    /* Reset margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+header {
+      display: flex;
+      justify-content: space-between; /* Title left, nav right */
+      align-items: center; /* Align vertically */ 
+      padding: 18px 30px;
+      background-color: #94BDEF; /* Dark background (optional) */
+      color: white;
+      margin: 5px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+#title {
+  font-size: 40px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px; /* Space between links */
+    }
+
+nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.4s;
+    }
+
+nav a:hover {
+      color: #000000; /* Accent hover color */
+    }
+
+.social {
+  background-color: #333333;;
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  width: 100%; /* so space-around works nicely */
+}
+
+.social a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.4s;
+}
+
+.social a:hover {
+  color: #94BDEF; /*
+  text-shadow: 
+    0 0 1px #00c8ff,
+    0 0 2px #00c8ff,
+    0 0 5px #00c8ff,
+    0 0 10px #00c8ff;
+  transition: text-shadow 0.3s ease, color 0.3s ease;*/
+}
+
+.main {
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 55vh; /* full height of screen */
+  background-image: url("./pics/ss.jpg");
+  background-color: rgba(0, 0, 0, 0.6); /* Ajusta el color */
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 50%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.content h1 {
+  font-size: 50px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 17px;
+}
+
+.content p {
+  margin: 17px;
+  font-size: 23px;
+}
+
+.images {
+  width: 50%;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+}
+
+.images img {
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease;
+}
+
+.images img:hover {
+  transform: translateY(-7px);
+}
+
+.members-section {
+  text-align: center; /*
+  background-color: #94BDEF; */
+  padding-bottom: 15px;
+  background: linear-gradient(180deg, #94BDEF, #c2daf7);
+}
+
+/*
+.members-section h2 {
+  padding: 20px;
+  font-size: 35px;
+  color: white;
+  letter-spacing: 3px;
+}
+*/
+
+.members-section h2 {
+  font-size: 40px;           /* make it stand out */
+  font-weight: 700;
+  letter-spacing: 3px;       /* spaced out letters */
+  text-transform: uppercase; /* for a clean strong look */
+  color: white;
+  margin: 40px 0 25px;       /* extra breathing room */
+  position: relative;        /* so the underline works */
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.members-section h2::after {
+  content: "";
+  display: block;
+  width: 60%;                /* accent line size */
+  height: 4px;               /* thickness */
+  background: #ffffff;       /* pastel accent color */
+  border-radius: 2px;
+  margin: 8px auto 0;
+
+  text-shadow: 
+  0 0 20px rgba(255,255,255,0.8),
+  0 0 15px rgba(255,255,255,0.6),
+  0 0 25px rgba(255,255,255,0.4);
+}
+
+.members-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* spacing between rows */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spacing between cards */
+}
+
+.member-card {
+  display: inline-block;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 220px; /* adjust card size */
+}
+
+.member-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 15px rgba(255,255,255,0.3);
+}
+
+.member-extra {
+  display: none;
+  margin: 10px 0;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* when hovering a card, show the next div */
+.member-card:hover + .member-extra {
+  display: block;
+}
+
+.dance-section {
+  text-align: center;
+  background-image: url(./pics/wall2.jpg);
+  background-color: rgba(0, 0, 0, 0.6); /* Ajusta el color */
+  background-blend-mode: darken;
+  height: 55vh;
+  background-size: cover;
+  background-position-y: 17%;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+}
+
+.dance-section h2 {
+  font-size: 35px; 
+  font-weight: 700;
+  letter-spacing: 3px;  
+  color: white;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 8px rgba(118, 229, 236, 0.6);
+}
+
+.dance-section h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin: 8px auto 0;
+  margin-bottom: 40px; 
+
+  text-shadow: 
+  0 0 20px rgba(255,255,255,0.8),
+  0 0 15px rgba(255,255,255,0.6),
+  0 0 25px rgba(255,255,255,0.4);
+}
+
+.dance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+.dance-card {
+  background: #a6c8f1;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease;
+  min-width: 400px;
+
+}
+
+.dance-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.dance-card h3 {
+  font-size: 20px;
+  margin-top: 12px;
+  color: #1d1d1d;
+}
+
+.dance-card p {
+  font-size: 14px;
+  color: #1d1d1d;
+}
+
+@media (min-width: 768px) {
+  .dance-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets+ */
+  }
+}
+
+.canciones {
+  text-align: center;
+  background-image: url(./pics/wall.jpg);
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  padding: 40px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.canciones h2 {
+  font-size: 35px; 
+  font-weight: 700;
+  letter-spacing: 3px;  
+  color: white;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 8px rgba(118, 229, 236, 0.6);
+}
+
+.canciones h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin: 8px auto 0;
+  margin-bottom: 40px; 
+
+  text-shadow: 
+  0 0 20px rgba(255,255,255,0.8),
+  0 0 15px rgba(255,255,255,0.6),
+  0 0 25px rgba(255,255,255,0.4);
+}
+
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.song-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 3px;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+  max-height: 360px;
+  box-shadow: 
+    0 0 1px #f2f2f2,
+    0 0 2px #f2f2f2,
+    0 0 3px #f2f2f2,
+    0 0 7px #f2f2f2;
+}
+
+.song-card:hover {
+  transform: translateY(-5px);
+}
+
+/*
+.song-wrapper {
+  position: relative;
+  padding-bottom: 130%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/*
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 12px;
+}
+
+*/
